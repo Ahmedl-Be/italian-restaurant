@@ -1,0 +1,76 @@
+
+.banner{
+    display: flex;
+}
+.leftBanner{
+    background-color: rgb(241, 220, 220);
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.leftBanner h1{
+    font-size: 60px;
+    text-align: center;
+    color: rgb(199, 13, 13);
+}
+
+.bannerBtn{
+    background-color: brown;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.rightBanner{
+    width: 50%;
+    height: 100vh;
+}
+
+.imageBanner{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1008px) {
+    .banner{
+        display: flex;
+        flex-direction: column;
+    }
+    .leftBanner{
+        background-color: rgb(241, 220, 220);
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .rightBanner{
+        width: 100%;
+        height: 50vh;
+    }
+    .imageBanner{
+        width: 100vw;
+        height: 50vh;
+        object-fit: cover;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .leftBanner h1{
+        font-size: 40px;
+    }
+}

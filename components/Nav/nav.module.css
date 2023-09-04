@@ -1,0 +1,80 @@
+.sale{
+    background-color: brown;
+    color: white;
+    text-align: center;
+    padding: 0.8rem;
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+}
+
+.rigthLinks, .leftIcons{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    color: rgb(216, 31, 31);
+}
+
+.mobileNav{
+    display:none;
+}
+
+@media screen and (max-width: 900px) {
+    .navBar{
+        display: none
+    }
+    .mNav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 25px 0px 0;
+        padding: 10px;
+    }
+    .mobileNav{
+        display: block;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 100;
+    }
+    .sideNav{
+        position: absolute;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 35px;
+        height: 100vh;
+        width: 100vw;
+        font-size: xx-large;
+        background-color: brown;
+        z-index: 2;
+    }
+
+    .phoneNum{
+        background-color: rgb(253 186 116);
+        padding: 0.5rem;
+        border-radius: 10px ;
+    }
+
+    .logo{
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .leftIcons{
+        color: rgb(255, 0, 0);
+    }
+}

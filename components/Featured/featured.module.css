@@ -1,0 +1,76 @@
+.container{
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+.content{
+display: flex;
+flex-wrap: nowrap;
+border-top: 1px white solid;
+}
+.featured{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 33vw;
+    color: rgb(199, 13, 13);
+    margin: 0 ;
+    padding: 25px 10px;
+    flex: 0 0 auto;
+}
+.featured:hover{
+    background-color: rgb(241, 220, 220);
+}
+.featuredPhoto{
+    width: 18rem;
+    height: 18rem;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+.featuredPhoto:hover{
+    transform: rotate(60deg);
+}
+.title{
+    font-size: x-large;
+    font-weight: 400;
+}
+.disc{
+    text-align: center;
+    margin: 0 50px;
+    font-size: small;
+    font-weight: 100;
+}
+.price{
+    font-weight: 700;
+}
+.AddToCartBtn{
+    background-color: rgb(199, 13, 13);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    .featured{
+      width: 50%; /* Display two product items per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    .featured{
+        width: 100%; /* Display one product item per row */
+    }
+}
