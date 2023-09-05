@@ -1,12 +1,14 @@
-// "use client"
 import { createSlice } from '@reduxjs/toolkit';
 
-const items = localStorage.getItem("cartItems") !== null ?
-    JSON.parse(localStorage.getItem("cartItems")) : []
 
-const initialState = {
-    products: items,
+let initialState = {
+    products: [],
 }
+
+// if (typeof window !== 'undefined') {
+//     const items = localStorage.getItem('cartItems');
+//     initialState.products = items !== null ? JSON.parse(items) : [];
+// }
 
 export const cartSlice = createSlice({
     name: 'cart',
@@ -22,19 +24,19 @@ export const cartSlice = createSlice({
             } else {
                 state.products.push(actions.payload)
             }
-            localStorage.setItem("cartItems",JSON.stringify(state.products.map(
-                item=>item)))
+            // localStorage.setItem("cartItems", JSON.stringify(state.products.map(
+            //     item => item)))
         },
 
         removeItem: (state, action) => {
-            const { itemId, size ,quantity } = action.payload;
-            const updatedProducts = state.products.filter(item => 
+            const { itemId, size, quantity } = action.payload;
+            const updatedProducts = state.products.filter(item =>
                 !(item.id === itemId
-                && item.options === size && item.quantity === quantity)
-                );
+                    && item.options === size && item.quantity === quantity)
+            );
             state.products = updatedProducts;
-            localStorage.setItem("cartItems",JSON.stringify(state.products.map(
-                item=>item)))
+            // localStorage.setItem("cartItems", JSON.stringify(state.products.map(
+            //     item => item)))
         },
 
         resetCart: (state) => {
