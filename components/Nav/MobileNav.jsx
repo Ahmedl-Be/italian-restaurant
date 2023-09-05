@@ -34,6 +34,7 @@ const MobileNav = () => {
                 <Link href="/menu" onClick={setTOOppsite}>MENU</Link>
                 <Link href="/" onClick={setTOOppsite}>CONTACT</Link>
                 <Link href="/login" onClick={setTOOppsite}>LOGIN</Link>
+                <Link href="/orders" onClick={setTOOppsite}>ORDERS</Link>
                 <CartIcon Oppsite={setTOOppsite}/>
                 <div className={`${styles.phoneNum} flex items-center`}>
                     <Image src={Phone} alt=''className='w-8 bg-orange-300 
