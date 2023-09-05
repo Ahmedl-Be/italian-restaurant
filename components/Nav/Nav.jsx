@@ -4,7 +4,7 @@ import MobileNav from './MobileNav'
 import CartIcon from './CartIcon'
 import Phone from "/public/phone.png"
 import Image from 'next/image'
-
+import SinginButton from "../SinginButton";
 const Nav = () => {
     return (
         <>
@@ -25,8 +25,9 @@ const Nav = () => {
                     <span className="bg-orange-300 px-1 rounded-tr 
                     rounded-br">555-44-00</span>
                     </div>
-                    <Link href="/login" className='font-bold uppercase'>
-                        Login</Link>
+                    <SinginButton />
+                    {/* <Link href="/login" className='font-bold uppercase'>
+                        Login</Link> */}
                     <Link href="/orders">Orders</Link>
                     <CartIcon />
                 </div>

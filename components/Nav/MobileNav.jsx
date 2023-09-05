@@ -7,7 +7,7 @@ import open from "/public/open.png"
 import close from "/public/close.png"
 import CartIcon from "./CartIcon"
 import Phone from "/public/phone.png"
-
+import SigninButton from "../SinginButton"
 
 const MobileNav = () => {
     const [Isopened, setIsopend] = useState(false)
@@ -33,7 +33,8 @@ const MobileNav = () => {
                 </Link>
                 <Link href="/menu" onClick={setTOOppsite}>MENU</Link>
                 <Link href="/" onClick={setTOOppsite}>CONTACT</Link>
-                <Link href="/login" onClick={setTOOppsite}>LOGIN</Link>
+                <SigninButton />
+                {/* <Link href="/login" onClick={setTOOppsite}>LOGIN</Link> */}
                 <Link href="/orders" onClick={setTOOppsite}>ORDERS</Link>
                 <CartIcon Oppsite={setTOOppsite}/>
                 <div className={`${styles.phoneNum} flex items-center`}>

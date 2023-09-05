@@ -27,8 +27,6 @@ const Price = ({ price, options, id, title, img }) => {
         setTotal(quantity * (price + options[selected].additionalPrice))
     }, [selected, quantity, options, price])
 
-
-    
     return (
         <div className="flex flex-col gap-10">
             <span className="font-bold text-2xl text-red-500">
@@ -40,8 +38,7 @@ const Price = ({ price, options, id, title, img }) => {
                     py-2 px-4 rounded"
                         key={index}
                         style={{
-                            background: selected === index ? "rgb(239 68 68)" :
-                            "white",
+                            background: selected === index ? "rgb(239 68 68)" : "white",
                             color: selected === index ? "white" : "red"
                         }}
                         onClick={() => handleCategorySelection(opt.title,index)}
