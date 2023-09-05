@@ -1,5 +1,4 @@
 
-```markdown
 # Italian Food Restaurant
 
 This is a web application for an Italian food restaurant built using Next.js, Tailwind CSS, Module CSS, and Redux. The application allows users to browse meals, add them to the cart, and remove them from the cart. The project is fully responsive, providing an optimal viewing experience across different devices.
